@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <title>Cafeteria</title>
+</head>
+<body>
+    <header>
+        <h1>Cafeteria do Dev</h1>
+        <h2 class="nome"><a href="#contato">Login</a></h2>
+        <button id="open-modal" class="modal-carrinho">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2H4L6.6 14H19L22 4H5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <circle cx="9" cy="20" r="1.8" fill="currentColor"/>
+            
+            <circle cx="17" cy="20" r="1.8" fill="currentColor"/>
+            </svg>
+        </button>
+        <div class="ancoras">
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+            <a href="#descricao-cafeteria">Descrição</a>
+        </div>
+    </header>
+    <main>
+        <section id="inicio"></section>
+        <!-- Modal -->
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div class="modal-header">
+                <h2>Seu Carrinho</h2>
+                <button id="close-modal">Fechar</button>
+            </div>
+            <div class="modal-body">
+                <ul id="itens-carrinho"></ul>
+                <p>Total : <span id="preco-total">R$ 0,00</span></p>
+            </div>
+        </div>
+
+        <section id="descricao-cafeteria">
+            <div class="descricao-cafeteria">
+                <h2>Bem-vindo à Cafeteria do Dev</h2>
+                <p>Desfrute de uma experiência única com nossos deliciosos cafés, lanches fresquinhos e um ambiente acolhedor. Venha nos visitar e saborear o melhor da cafeteria!</p>
+                <p>Localizada na Rua das Flores, 123 - São Paulo/SP</p>
+                <img src="cafeteria.jpg" alt="Foto da cafeteria">
+            </div>
+        </section>
+        <section id="cardapio">
+            <div class="cardapio">
+                <h2>Nosso cardápio</h2>
+                <table>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Tamanho</th>
+                        <th>Preço</th>
+                        <th>Carrinho</th>
+                    </tr>
+                    <tr>
+                        <td id="cafe-expresso">Café Expresso</td>
+                        <td>Pequeno</td>
+                        <td>R$ 5,00</td>
+                        <td><button class="adicionar-carrinho">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <td id="cafe-cappuccino">Café Cappuccino</td>
+                        <td>Médio</td>
+                        <td>R$ 7,00</td>
+                        <td><button class="adicionar-carrinho">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <td id="salgado">Salgado</td>
+                        <td>Médio</td>
+                        <td>R$ 6,00</td>
+                        <td><button class="adicionar-carrinho">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button></td>
+                    </tr>
+                </table>
+                <h3>Diferenciais da casa</h3>
+                <ul>
+                    <li>Grãos Orgânicos</li>
+                    <li>Wi-fi</li>
+                    <li>Frete grátis para pedidos acima de R$ 50,00</li>
+                    <li>Aceitamos qualquer tipo de pagamento</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contato">
+            <div class="contato">
+                <h2>Fale Conosco</h2>
+                <form id="form-contato" action="">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" required>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="fav-cafe">Café Favorito:</label>
+                    <select name="fav-cafe" id="fav-cafe">
+                        <option value="cafe-expresso">Café Expresso</option>
+                        <option value="cafe-cappuccino">Café Cappuccino</option>
+                    </select>
+                    <label for="feedback">Feedback</label>
+                    <textarea name="feedback" id="feedback"></textarea>
+                    <button type="submit" id="enviar-btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Cafeteria do Dev. Todos os direitos reservados.</p>
+        <div>
+            <p>Siga-nos:
+                <a href="https://github.com/Nixx07" target="_blank">GitHub</a>
+            </p>
+            <p>
+                <a href="#inicio">Voltar ao topo</a>
+            </p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
