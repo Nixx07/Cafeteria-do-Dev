@@ -9,7 +9,7 @@
     /* Cores de contraste */
     --destaque-ouro: #ffcc33;
     --branco-puro: #ffffff;
-    --texto-corpo: #2c1e1a;
+    --texto-corpo: #140e0c;
     --bg-card: rgba(62, 39, 35, 0.1);
 }
 
@@ -118,7 +118,7 @@ a:hover {
 
 /*Div's*/
 .descricao-cafeteria, .cardapio, .contato {
-    background-color: rgba(255, 249, 240, 0.616);
+    background-color: rgba(255, 249, 240, 0.952);
     max-width: 800px;
     padding: 30px;
     border: 2px solid var(--cafe-medio);
